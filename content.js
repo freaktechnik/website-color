@@ -53,7 +53,7 @@ const setColor = (color) => {
                 if(browserConfig.ok) {
                     const text = await browserConfig.text(),
                         parser = new DOMParser();
-                    const doc = parser.parseFromSTring(text, "application/xml");
+                    const doc = parser.parseFromString(text, "application/xml");
                     const color = doc.querySelector("TileColor");
                     if(color) {
                         return setColor(color.textContent);
